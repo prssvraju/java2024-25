@@ -12,3 +12,12 @@ class Shape
         return 3.14*r*r;
     }
 }    
+class MyCode
+{
+    public static void main(String[] args) {
+        
+        Shape circle=new Shape();
+        System.out.println("Area of circle is "+circle.area(20));
+    }
+
+}
