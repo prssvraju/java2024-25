@@ -5,6 +5,14 @@ class A implements Runnable
         for(int i=1;i<=10;i++)
         {
             System.out.println("2*"+i+"="+(2*i));
+            try
+            {
+                Thread.sleep(400);
+            }
+            catch(InterruptedException e)
+            {
+                e.printStackTrace();
+            }
         }
     }
 }
@@ -15,6 +23,14 @@ class B implements Runnable
         for(int j=1;j<=10;j++)
         {
             System.out.println("3*"+j+"="+(3*j));
+            try
+            {
+                Thread.sleep(400);
+            }
+            catch(InterruptedException e)
+            {
+                e.printStackTrace();
+            }
         }
     }
 }
@@ -40,7 +56,7 @@ class JoinTest
         {
           e.printStackTrace();
         }
-       
+        
         System.out.println("Thread t2 is live :"+t2.isAlive());
     }
 }
